@@ -3,17 +3,23 @@
 using namespace std;
 int main(){
 
-int numero, soma;
-   soma=0;
-   do{
-  cout << "Digite um numero: ";
-  cin >> numero;
-  if(numero%2 != 0){
-    soma += numero;
+    int x,y,troca, soma;
+   
+  cout << "Digite dois numero: \n";
+  cin >> x >> y;
+  
+  if( x > y ){
+   troca = x;
+   x = y;
+   y = troca;
   }
 
-}while(numero%2 != 0);
-cout << "Soma dos numeros imapares: "<< soma;
-   
+soma = 0;
+for( int i = x + 1; i < y; i++){
+    if (i % 2 != 0 ){
+        soma = soma + i;
+    }
+}
+   cout << "Soma dos impares: " << soma << endl;
     return 0;
 }
